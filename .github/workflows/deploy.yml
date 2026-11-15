@@ -43,7 +43,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp -r index.html 404.html trainer assets data site.config.json _site/
+          cp -r index.html 404.html assets data site.config.json _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5
