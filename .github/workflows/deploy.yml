@@ -1,0 +1,56 @@
+name: Build and deploy site
+
+# Runs on every push, on a schedule (so new repositories and releases appear by themselves),
+# and by hand from the Actions tab ("Run workflow").
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Reads the public repositories of the account that owns this repository and writes
+      # data/projects.json. The file is generated here, so it is never committed.
+      - name: Read projects from the profile
+        run: python scripts/fetch_projects.py
+        env:
+          OWNER: ${{ github.repository_owner }}
+          SITE_REPO: ${{ github.event.repository.name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -r index.html 404.html trainer assets data site.config.json _site/
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
