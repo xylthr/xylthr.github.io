@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xyl’thr – Creator &amp; Developer</title>
+  <meta name="theme-color" content="#cdc8ad">
+  <meta property="og:title" content="Xyl’thr – Creator &amp; Developer">
+  <meta name="description" content="Xyl’thr, creator of game mods and developer tools. Projects are listed automatically from GitHub.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234a4639'/%3E%3Crect x='4' y='4' width='56' height='56' fill='none' stroke='%23b9b49c' stroke-width='2'/%3E%3Cpath d='M14 14L50 50M50 14L14 50' stroke='%23e8e4cf' stroke-width='6'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%234a4639'/%3E%3Ccircle cx='27' cy='29' r='3' fill='%23e8e4cf'/%3E%3Ccircle cx='37' cy='29' r='3' fill='%23e8e4cf'/%3E%3Ccircle cx='32' cy='38' r='3' fill='%23e8e4cf'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js" defer></script>
+  <script src="assets/fx.js" defer></script>
+  <script src="assets/cursor.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+  <div class="bg"></div>
+  <div class="wrap">
+    <header class="top" id="top">
+      <a class="logo" href="#top">XYL’THR</a>
+      <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#links">Links</a></nav>
+      <div class="snd">
+        <button id="sfx" aria-pressed="true">Sound On</button>
+        <button id="mus" aria-pressed="true">Music On</button>
+      </div>
+    </header>
+  </div>
+  <div class="strip"></div>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>XYL’THR</h1>
+      <p class="lead">Hello! I’m Xyl’thr, the creator behind these projects.</p>
+      <p class="sub">I started with Python and game mods, and now build tools, web pages and mods that help creators and players.</p>
+      <div class="row">
+        <a class="btn fill" href="#projects">See my projects</a>
+        <a class="btn" href="https://github.com/xylthr" target="_blank" rel="noopener">GitHub profile</a>
+      </div>
+      <div class="row chips" aria-label="Languages">
+        <a class="chip" href="https://www.python.org/" target="_blank" rel="noopener">Python</a><a class="chip" href="https://www.java.com/" target="_blank" rel="noopener">Java</a><a class="chip" href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener">C#</a><a class="chip" href="https://www.lua.org/" target="_blank" rel="noopener">Lua</a><a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript</a><a class="chip" href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a><a class="chip" href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a><a class="chip" href="https://isocpp.org/" target="_blank" rel="noopener">C++</a><a class="chip" href="https://kotlinlang.org/" target="_blank" rel="noopener">Kotlin</a>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search projects" aria-label="Search projects">
+        <label><input id="forks" type="checkbox"> Show forks</label>
+        <span id="count" aria-live="polite"></span>
+      </div>
+      <p class="note" id="demo" hidden>Preview mode: these are sample projects, not real ones.</p>
+      <div id="list" class="grid" aria-busy="true"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <div class="links">
+        <button class="plate" id="discord">Discord</button>
+        <a class="plate" href="https://github.com/xylthr/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="strip"></div><p>&copy; <span id="year"></span> Xyl’thr. All rights reserved.</p></footer>
+  <div id="toast" class="toast" role="status"></div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "owner": "xylthr",
+  "profile": { "name": "Sample", "avatar": null, "bio": null, "url": "https://github.com/" },
+  "projects": [
+    {
+      "name": "mdrg-trainer",
+      "description": "In-game creative menu for My Dystopian Robot Girlfriend: item browser, inventory remover, colors, money and needs.",
+      "url": "https://github.com/xylthr/mdrg-trainer",
+      "homepage": null,
+      "language": "C#",
+      "stars": 24,
+      "forks": 3,
+      "topics": ["featured", "bepinex", "il2cpp", "mdrg", "trainer"],
+      "featured": true,
+      "pushed": "2026-11-10T12:00:00Z",
+      "release": {
+        "tag": "v1.1.0",
+        "name": "MDRG Trainer 1.1.0",
+        "published": "2026-11-10T12:00:00Z",
+        "url": "https://github.com/xylthr/mdrg-trainer/releases/tag/v1.1.0",
+        "assets": [
+          { "name": "MDRG-Trainer-1.1.0-with-BepInEx.zip", "size": 34362461, "downloads": 120, "url": "https://example.com/with-bepinex.zip" },
+          { "name": "MDRG-Trainer-1.1.0-plugin-only.zip", "size": 23750, "downloads": 40, "url": "https://example.com/plugin-only.zip" }
+        ]
+      }
+    },
+    {
+      "name": "save-tools",
+      "description": "Back up, compare and restore game saves from one small window.",
+      "url": "https://github.com/xylthr/save-tools",
+      "homepage": "https://example.com",
+      "language": "Python",
+      "stars": 9,
+      "forks": 1,
+      "topics": ["tool", "saves", "python"],
+      "featured": false,
+      "pushed": "2026-10-02T09:00:00Z",
+      "release": {
+        "tag": "v0.3",
+        "name": "v0.3",
+        "published": "2026-10-02T09:00:00Z",
+        "url": "https://github.com/xylthr/save-tools/releases/tag/v0.3",
+        "assets": [{ "name": "save-tools.zip", "size": 1048576, "downloads": 12, "url": "https://example.com/save-tools.zip" }]
+      }
+    },
+    {
+      "name": "mod-manager",
+      "description": "Reorder, enable and disable community mods, and spot conflicts before you launch.",
+      "url": "https://github.com/xylthr/mod-manager",
+      "homepage": null,
+      "language": "C#",
+      "stars": 4,
+      "forks": 0,
+      "topics": ["tool", "mods"],
+      "featured": false,
+      "pushed": "2026-08-20T09:00:00Z",
+      "release": null
+    },
+    {
+      "name": "missing-item-fixer",
+      "description": null,
+      "url": "https://github.com/xylthr/missing-item-fixer",
+      "homepage": null,
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "topics": ["tool", "saves"],
+      "featured": false,
+      "pushed": "2026-05-01T09:00:00Z",
+      "release": null
+    }
+  ]
+}

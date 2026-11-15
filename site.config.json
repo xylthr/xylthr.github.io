@@ -1,0 +1,9 @@
+{
+  "githubUser": "xylthr",
+  "discord": "xyl.thr",
+  "excludeRepos": ["xylthr.github.io", "xylthr"],
+  "featuredTopic": "featured",
+  "hideTopic": "nosite",
+  "sounds": { "hover": "", "click": "", "back": "" },
+  "musicFile": ""
+}
